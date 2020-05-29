@@ -1,13 +1,15 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = {
   // webpack will take the files from ./src/app.tsx
-  entry: "./src/index.tsx",
+  entry: {
+    demo: "./src/index.tsx",
+  },
   // and output it into /dist as bundle.js
   output: {
     path: path.join(__dirname, "/dist"),
-    filename: "bundle.js",
-    publicPath: "/",
+    chunkFilename: "[name].js",
   },
   // adding .ts and .tsx to resolve.extensions will help babel look for .ts and .tsx files to transpile
   resolve: {
@@ -46,6 +48,18 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /node_modules/,
+          chunks: "initial",
+          name: "vendor",
+          enforce: true,
+        },
+      },
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
