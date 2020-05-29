@@ -1,0 +1,19 @@
+{
+    "folders": [
+      {
+        "path": "./"
+      }
+    ],
+    "settings": {
+      "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.organizeImports": true
+      },
+      "editor.formatOnSave": true,
+      "typescript.tsdk": "node_modules\\typescript\\lib",
+      "javascript.preferences.quoteStyle": "single",
+    },
+    "extensions": {
+      "recommendations": ["esbenp.prettier-vscode", "ms-vscode.vscode-typescript-tslint-plugin"]
+    }
+  }
