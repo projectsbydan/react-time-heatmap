@@ -16,7 +16,7 @@ export const getTimeEntries = (): ITimeEntry[] => {
       );
 
       result.push({
-        count: Math.floor(Math.random() * 5689),
+        count: Math.floor(Math.random() * 1001),
         time: dateWithDay,
       });
     }
