@@ -1,0 +1,55 @@
+$blue: #0044AA
+$gray: #DBDCDB
+$gap: .3em
+$borderRadius: .1em
+
+.timeHeatMap
+    &:not(.flow)
+        max-width: 15em
+            
+    .mapContainer
+        display: flex
+        .map
+            display: grid
+            column-gap: $gap
+            row-gap: $gap
+            flex: 1
+
+            .timeEntry
+                background-color: $gray
+                text-align: center
+                padding: $borderRadius
+                min-height: .5em
+                border-radius: $borderRadius
+                cursor: pointer
+
+                &.withCount
+                    background-color: $blue
+        
+        .hours
+            padding-left: 1em
+            display: flex
+            flex-direction: column
+            justify-content: stretch
+            align-items: center
+    
+            div
+                flex: 1
+                display: flex
+                align-items: center
+    .legend
+        display: grid
+        column-gap: $gap
+        margin-right: 2em
+        margin-top: 1em
+        border-radius: $borderRadius
+        div
+            text-align: right
+            
+            .legendEntry
+                background-color: $blue
+                height: .5rem
+            
+
+            
+                
