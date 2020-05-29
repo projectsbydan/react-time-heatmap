@@ -5,4 +5,5 @@ export interface ITimeHeapMapProps {
   showCounts?: boolean;
   flow?: boolean;
   numberOfGroups?: number;
+  textForNoTimeEntries?: string;
 }
