@@ -2,21 +2,21 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/924b2f51-6e9a-4b3b-8cef-4195fffe6302/deploy-status)](https://app.netlify.com/sites/react-time-heatmap/deploys)
 
-## Show a heatmap based on the time of day for a week
+## Show a heatmap based on the time of day for several days
 
 😎 Demo: https://react-time-heatmap.netlify.app/
 
-The component takes in time entries and displays the count as a heatmap.
+The component takes time entries and displays the count as a heatmap.
 
-✔ You can add entries for an unlimited number of days
+✔ add entries for an unlimited number of days
 
-✔ Select the number of groups/levels to show in colours
+✔ select the number of groups/levels to show in colours
 
-✔ Can be made to flow, to use all space it has responsively
+✔ can be made to flow and use all space it has responsively
 
 ## Examples
 
-Shows entries from 7 days separated into 4 groups
+Shows entries from 7 days of entries (the entries themselves contain data for 7 days or for 168 hours)
 
 ```typescript
 <TimeHeatMap timeEntries={entries} />
@@ -28,7 +28,7 @@ Shows entries into a custom number of groups
 <TimeHeatMap timeEntries={entries} numberOfGroups={7} />
 ```
 
-Shows count for every hour
+Shows count for every hour (use for testing)
 
 ```typescript
 <TimeHeatMap timeEntries={entries} showCounts={true} />
@@ -44,21 +44,21 @@ Shows count for every hour
 | textForNoTimeEntries | no       | custom text to show when there are no entries loaded        | `"No time entries"` |
 | showCounts           | no       | shows the counts for every hour, for testing                | `false`             |
 
-## Entries example (shortened)
+## Entries example, 7 days or 168 hours with counts between 0 and 1000 (image shortened)
 
 ![Entries example](https://react-time-heatmap-img.netlify.app/entries.png)
 
-✔ time. minute or time zone are not relevant
+✔ hours, minutes or time zone are not relevant
 
-✔ the time needs to be a valid date
+✔ the `time` needs to be a valid date
 
-✔ the entries will be sorted by the component
+✔ the entries will be sorted by the component (left to right, past to present)
 
 👏 typescript will make sure you type everything right
 
 ## Examples
 
-| Base example                                                        | Custom nr. groups                                                         | Show counts                                                            |
+| Base example (7 days)                                               | Custom nr. groups (10 days, 7 groups)                                     | Show counts                                                            |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | ![Base example](https://react-time-heatmap-img.netlify.app/7_4.gif) | ![Custom nr. groups](https://react-time-heatmap-img.netlify.app/10_7.gif) | ![Show counts](https://react-time-heatmap-img.netlify.app/numbers.gif) |
 
@@ -72,3 +72,5 @@ Flow enabled, responsive
 - uses CSS Grid to create the arrangement
 - styles applied with sass modules
 - support by any browser that supports grids (not IE)
+
+Checkout more of me and my work at https://projectsbydan.com
