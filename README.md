@@ -18,7 +18,7 @@ The component takes time entries and displays the count as a heatmap.
 
 ## Install
 
-`npm i react-time-heatmap`
+`npm i --save react-time-heatmap`
 
 ## Examples
 
