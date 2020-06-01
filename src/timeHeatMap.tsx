@@ -71,9 +71,9 @@ export const TimeHeatMap = (props: ITimeHeapMapProps) => {
           className={styles.map}
           style={{ gridTemplateColumns: `repeat(${numberOfDays},1fr)` }}
         >
-          {timeEntries.map((x) => (
+          {timeEntries.map((x, i) => (
             <div
-              key={x.time.getTime()}
+              key={i}
               title={`${x.count}`}
               className={getEntryClassName(x)}
               style={{

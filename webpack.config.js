@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   // webpack will take the files from ./src/app.tsx
   entry: {
-    demo: "./src/index.tsx",
+    demo: "./demo/index.tsx",
   },
   // and output it into /dist as bundle.js
   output: {
@@ -63,7 +63,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/public/index.html",
+      template: "./demo/public/index.html",
     }),
   ],
 };

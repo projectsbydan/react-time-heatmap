@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { render } from "react-dom";
+import { ITimeEntry } from "../src/interfaces/iTimeEntry";
+import { TimeHeatMap } from "../src/timeHeatMap";
 import { getTimeEntries } from "./example";
-import { ITimeEntry } from "./interfaces/iTimeEntry";
-import { TimeHeatMap } from "./timeHeatMap";
 
 const App = () => {
   const [entries, setEntries] = useState<ITimeEntry[]>([]);
