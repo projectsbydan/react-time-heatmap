@@ -1,4 +1,4 @@
-import { ITimeEntry } from "./interfaces/iTimeEntry";
+import { ITimeEntry } from "../src/interfaces/iTimeEntry";
 
 export const getTimeEntries = (): ITimeEntry[] => {
   const result: ITimeEntry[] = [];
