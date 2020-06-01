@@ -50,7 +50,7 @@ Shows count for every hour (use for testing)
 
 ✔ hours, minutes or time zone are not relevant
 
-✔ the `time` needs to be a valid date
+✔ `time` needs to be a valid date
 
 ✔ the entries will be sorted by the component (left to right, past to present)
 
@@ -58,7 +58,7 @@ Shows count for every hour (use for testing)
 
 ## Examples
 
-| Base example (7 days)                                               | Custom nr. groups (10 days, 7 groups)                                     | Show counts                                                            |
+| Base example (7 days)                                               | Custom nr. groups (10 days)                                               | Show counts                                                            |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | ![Base example](https://react-time-heatmap-img.netlify.app/7_4.gif) | ![Custom nr. groups](https://react-time-heatmap-img.netlify.app/10_7.gif) | ![Show counts](https://react-time-heatmap-img.netlify.app/numbers.gif) |
 
@@ -71,6 +71,7 @@ Flow enabled, responsive
 - made with React Hooks
 - uses CSS Grid to create the arrangement
 - styles applied with sass modules
+- the animations in the images are just for example, the component will rerender only when new entries are passed
 - support by any browser that supports grids (not IE)
 
 Checkout more of me and my work at https://projectsbydan.com
