@@ -14,6 +14,12 @@ The component takes time entries and displays the count as a heatmap.
 
 ✔ can be made to flow and use all space it has responsively
 
+✔ has no dependencies
+
+## Install
+
+`npm i react-time-heatmap`
+
 ## Examples
 
 Shows entries from 7 days of entries (the entries themselves contain data for 7 days or for 168 hours)

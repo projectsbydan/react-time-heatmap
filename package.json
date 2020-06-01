@@ -1,14 +1,23 @@
 {
   "name": "react-time-heatmap",
-  "version": "0.0.1",
-  "description": "react-time-heatmap",
+  "version": "1.0.0",
+  "description": "Show a heatmap based on the time of day for several days",
   "main": "index.tsx",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production"
   },
+  "keywords": [
+    "time",
+    "heatmap",
+    "timeheatmap",
+    "react",
+    "responsive",
+    "chart"
+  ],
   "author": "projectsbydan.com",
   "license": "MIT",
+  "homepage": "https://github.com/projectsbydan/react-time-heatmap",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.10.0",
