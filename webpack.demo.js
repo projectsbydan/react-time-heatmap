@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   // webpack will take the files from ./src/app.tsx
   entry: {
-    index: "./src/timeHeatMap.tsx",
+    demo: "./demo/index.tsx",
   },
   // and output it into /dist as bundle.js
   output: {
@@ -39,10 +39,31 @@ module.exports = {
           "sass-loader",
         ],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
+        exclude: /node_modules/,
+        use: ["file-loader?name=[name].[ext]"], // ?name=[name].[ext] is only necessary to preserve the original file name
+      },
     ],
   },
-  externals: {
-    react: "react",
+  devServer: {
+    historyApiFallback: true,
   },
-  plugins: [],
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /node_modules/,
+          chunks: "initial",
+          name: "vendor",
+          enforce: true,
+        },
+      },
+    },
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./demo/public/index.html",
+    }),
+  ],
 };
