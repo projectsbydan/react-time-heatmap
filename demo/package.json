@@ -21,7 +21,7 @@
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-time-heatmap": "0.0.8"
+    "react-time-heatmap": "0.0.9"
   },
   "devDependencies": {
     "@babel/core": "^7.10.0",
