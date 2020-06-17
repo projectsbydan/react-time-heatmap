@@ -1,7 +1,5 @@
 import React from "react";
-import styles from "./common/index.sass";
-import { ITimeEntry } from "./interfaces/iTimeEntry";
-import { ITimeHeapMapProps } from "./interfaces/iTimeHeatMapProps";
+import styles from "./index.sass";
 
 const hours: string[] = [
   "00",
@@ -17,6 +15,19 @@ const hours: string[] = [
   "20",
   "22",
 ];
+
+export interface ITimeEntry {
+  time: Date;
+  count: number;
+}
+
+export interface ITimeHeapMapProps {
+  timeEntries: ITimeEntry[];
+  showCounts?: boolean;
+  flow?: boolean;
+  numberOfGroups?: number;
+  textForNoTimeEntries?: string;
+}
 
 export const TimeHeatMap = (props: ITimeHeapMapProps) => {
   if (props.timeEntries.length === 0) {

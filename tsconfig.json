@@ -9,7 +9,9 @@
     "sourceMap": true,
     "declaration": true,
     "lib": ["es2015", "dom"],
-    "outDir": "./"
+    "outDir": ".",
+    "emitDeclarationOnly": true
   },
-  "exclude": ["node_modules", "**/node_modules/*", "demo", "interfaces"]
+  "exclude": ["node_modules", "**/node_modules/*", "demo"],
+  "include": ["src"]
 }
