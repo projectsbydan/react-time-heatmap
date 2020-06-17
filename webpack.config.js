@@ -1,15 +1,15 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  // webpack will take the files from ./src/app.tsx
   entry: {
     index: "./src/timeHeatMap.tsx",
   },
-  // and output it into /dist as bundle.js
   output: {
-    path: path.join(__dirname, "/dist"),
-    chunkFilename: "[name].js",
+    path: __dirname,
+    filename: "[name].js",
+    libraryTarget: "umd",
+    library: "react-time-heatmap",
+    umdNamedDefine: true,
   },
   // adding .ts and .tsx to resolve.extensions will help babel look for .ts and .tsx files to transpile
   resolve: {
@@ -21,9 +21,11 @@ module.exports = {
       {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-        },
+        use: [
+          {
+            loader: "babel-loader",
+          },
+        ],
       },
       // css-loader to bundle all the css files into one file and style-loader to add all the styles  inside the style tag of the document
       {
@@ -41,6 +43,7 @@ module.exports = {
       },
     ],
   },
+  devtool: "source-map",
   externals: {
     react: "react",
   },

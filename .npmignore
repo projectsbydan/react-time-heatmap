@@ -1,5 +1,7 @@
-/demo
-/dist
-react-time-heatmap.code-workspace 
-webpack.config.js
-.babelrc
+.*
+**/tsconfig.json
+**/webpack.*.js
+node_modules
+src
+**/*.code-workspace
+*.md
