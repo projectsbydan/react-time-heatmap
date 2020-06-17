@@ -10,9 +10,9 @@ The component takes time entries and displays the count as a heatmap.
 
 ✔ add entries for an unlimited number of days
 
-✔ select the number of groups/levels to show in colours
+✔ select the number of groups/levels to show in colours (light blue to dark blue)
 
-✔ can be made to flow and use all space it has responsively
+✔ can be made to flow and use all the space it has, responsively
 
 ✔ has no dependencies
 
@@ -20,9 +20,15 @@ The component takes time entries and displays the count as a heatmap.
 
 `npm i --save react-time-heatmap`
 
+## Import
+
+```typescript
+import { ITimeEntry, TimeHeatMap } from "react-time-heatmap";
+```
+
 ## Examples
 
-Shows entries from 7 days of entries (the entries themselves contain data for 7 days or for 168 hours)
+Shows entries
 
 ```typescript
 <TimeHeatMap timeEntries={entries} />
@@ -34,7 +40,7 @@ Shows entries into a custom number of groups
 <TimeHeatMap timeEntries={entries} numberOfGroups={7} />
 ```
 
-Shows count for every hour (use for testing)
+Shows count for every hour (use for debugging)
 
 ```typescript
 <TimeHeatMap timeEntries={entries} showCounts={true} />
@@ -77,7 +83,7 @@ Flow enabled, responsive
 - made with React Hooks
 - uses CSS Grid to create the arrangement
 - styles applied with sass modules
-- the animations in the images are just for example, the component will rerender only when new entries are passed
+- the animations in the images are just an example, the component will rerender only when new entries are passed
 - support by any browser that supports grids (not IE)
 
 Checkout more of me and my work at https://projectsbydan.com
