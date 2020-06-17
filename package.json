@@ -1,11 +1,11 @@
 {
   "name": "react-time-heatmap",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Show a heatmap based on the time of day for several days",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "rm -rf index.js index.js.map lib lib-esm && tsc && tsc -m es6 --outDir lib-esm && webpack --mode production"
+    "build": "rm -rf index.js index.js.map index.d.ts interfaces && tsc --emitDeclarationOnly && webpack --mode production"
   },
   "keywords": [
     "time",

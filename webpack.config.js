@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    index: "./src/timeHeatMap.tsx",
+    index: "./src/index.tsx",
   },
   output: {
     path: __dirname,

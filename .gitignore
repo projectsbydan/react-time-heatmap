@@ -107,3 +107,5 @@ lib
 lib-esm
 index.js
 index.js.map
+interfaces
+index.d.ts

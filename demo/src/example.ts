@@ -1,4 +1,4 @@
-import { ITimeEntry } from "../src/interfaces/iTimeEntry";
+import { ITimeEntry } from "react-time-heatmap";
 
 export const getTimeEntries = (): ITimeEntry[] => {
   const result: ITimeEntry[] = [];
