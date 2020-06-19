@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   // webpack will take the files from ./src/app.tsx
   entry: {
-    demo: "./src/index.tsx",
+    demo: path.join(__dirname, "/src/index.tsx"),
   },
   // and output it into /dist as bundle.js
   output: {
@@ -48,18 +48,6 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-  },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /node_modules/,
-          chunks: "initial",
-          name: "vendor",
-          enforce: true,
-        },
-      },
-    },
   },
   plugins: [
     new HtmlWebpackPlugin({

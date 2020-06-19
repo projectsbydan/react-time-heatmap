@@ -55,6 +55,8 @@ Shows count for every hour (use for debugging)
 | flow                 | no       | allow the component to take the full width of its container | `false`             |
 | textForNoTimeEntries | no       | custom text to show when there are no entries loaded        | `"No time entries"` |
 | showCounts           | no       | shows the counts for every hour, for testing                | `false`             |
+| showGroups           | no       | shows the groups under the heat map                         | `true`              |
+| showHours            | no       | shows the hours                                             | `true`              |
 
 ## Entries example, 7 days or 168 hours with counts between 0 and 1000 (image shortened)
 

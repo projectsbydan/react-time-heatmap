@@ -17,7 +17,10 @@ const App = () => {
     <TimeHeatMap
       timeEntries={entries}
       showCounts={false}
-      numberOfGroups={4}
+      numberOfGroups={7}
+      showGroups={true}
+      showHours={true}
+      flow
       textForNoTimeEntries="No time entries"
     />
   );

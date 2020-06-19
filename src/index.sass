@@ -4,11 +4,18 @@ $gap: .3em
 $borderRadius: .1em
 
 .timeHeatMap
+    height: 100%
+    display: flex
+    flex-direction: column
+    
+
     &:not(.flow)
         max-width: 15em
             
     .mapContainer
         display: flex
+        flex: 1
+
         .map
             display: grid
             column-gap: $gap
@@ -19,12 +26,11 @@ $borderRadius: .1em
                 background-color: $gray
                 text-align: center
                 padding: $borderRadius
-                min-height: .5em
                 border-radius: $borderRadius
                 cursor: pointer
                 transition: opacity 161ms linear
 
-                &.withCount
+                &.hasValue
                     background-color: $blue
         
         .hours

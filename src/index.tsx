@@ -27,6 +27,8 @@ export interface ITimeHeapMapProps {
   flow?: boolean;
   numberOfGroups?: number;
   textForNoTimeEntries?: string;
+  showGroups?: boolean;
+  showHours?: boolean;
 }
 
 export const TimeHeatMap = (props: ITimeHeapMapProps) => {
@@ -60,7 +62,7 @@ export const TimeHeatMap = (props: ITimeHeapMapProps) => {
     const classes: string[] = [styles.timeEntry];
 
     if (entry.count !== 0) {
-      classes.push(styles.withCount);
+      classes.push(styles.hasValue);
     }
 
     return classes.join(" ");
@@ -95,26 +97,30 @@ export const TimeHeatMap = (props: ITimeHeapMapProps) => {
             </div>
           ))}
         </article>
-        <article className={styles.hours}>
-          {hours.map((x) => (
-            <div key={x}>{x}</div>
+        {props.showHours !== false ? (
+          <article className={styles.hours}>
+            {hours.map((x) => (
+              <div key={x}>{x}</div>
+            ))}
+          </article>
+        ) : null}
+      </div>
+      {props.showGroups !== false ? (
+        <article
+          className={styles.legend}
+          style={{ gridTemplateColumns: `repeat(${numberOfGroups}, 1fr)` }}
+        >
+          {limits.map((x, i) => (
+            <div key={i}>
+              <div
+                className={styles.legendEntry}
+                style={{ opacity: (1 / numberOfGroups) * (i + 1) }}
+              ></div>
+              {x}
+            </div>
           ))}
         </article>
-      </div>
-      <article
-        className={styles.legend}
-        style={{ gridTemplateColumns: `repeat(${numberOfGroups}, 1fr)` }}
-      >
-        {limits.map((x, i) => (
-          <div key={i}>
-            <div
-              className={styles.legendEntry}
-              style={{ opacity: (1 / numberOfGroups) * (i + 1) }}
-            ></div>
-            {x}
-          </div>
-        ))}
-      </article>
+      ) : null}
     </section>
   );
 };

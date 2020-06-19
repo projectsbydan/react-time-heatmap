@@ -1,6 +1,6 @@
 {
   "name": "react-time-heatmap",
-  "version": "0.0.9",
+  "version": "0.1.4",
   "description": "Show a heatmap based on the time of day for several days",
   "main": "index.js",
   "scripts": {
